@@ -101,12 +101,12 @@ const navDim = {
 
 let portals = {
     setup: setupPortal,
-    tokens: tokensPortal,
-    diamonds: diamondsPortal,
-    mods: modsPortal,
-    ships: shipsPortal,
-    academyGears: academyGearsPortal,
-    academyFarms: academyFarmsPortal
+    //tokens: tokensPortal,
+    //diamonds: diamondsPortal,
+    //mods: modsPortal,
+    //ships: shipsPortal,
+    //academyGears: academyGearsPortal,
+    //academyFarms: academyFarmsPortal
 }
 
 let panelResizeFunction = null;
