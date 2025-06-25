@@ -175,7 +175,7 @@ function ConstructPortal(h, w, obj) {
 
     if (activePage.lockboxes) {
         activePage.lockboxes.forEach(lockbox => {
-            new newCont = document.createElement("label");
+            let newCont = document.createElement("label");
             portalPanel.elem.appendChild(newCont);
             newCont.classList.add("lockcontainer");
             newCont.style.left = `${cellSize * lockbox.left}px`;
