@@ -1,40 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>CIFI Optimizer</title>
-        <nav><a href="https://StormSurge95.github.io">HOME</a></nav>
         <link rel="stylesheet" href="src/CIFI/CIFIstyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <!-- Tab Links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event,'Setup')">SETUP</button>
-            <button class="tablinks" onclick="openTab(event,'Tokens')">TOKENS</button>
-            <button class="tablinks" onclick="openTab(event,'Diamonds')">DIAMONDS</button>
-            <button class="tablinks" onclick="openTab(event,'Mods')">MODS</button>
-            <button class="tablinks" onclick="openTab(event,'Ships')">SHIPS</button>
-            <button class="tablinks" onclick="openTab(event,'Academy')">ACADEMY</button>
-        </div>
-        <!-- Tab Content -->
-        <div id="Setup" class="tabcontent" style="display: block;">
-            <h1>OPTIMIZER SETUP</h1>
-        </div>
-        <div id="Tokens" class="tabcontent">
-            <h1>TOKEN SHOP OPTIMIZER</h1>
-        </div>
-        <div id="Diamonds" class="tabcontent">
-            <h1>DIAMOND SHOP OPTIMIZER</h1>
-        </div>
-        <div id="Mods" class="tabcontent">
-            <h1>MOD TREE OPTIMIZER</h1>
-        </div>
-        <div id="Ships" class="tabcontent">
-            <h1>SHIP UPGRADE OPTIMIZER</h1>
-        </div>
-        <div id="Academy" class="tabcontent">
-            <h1>ACADEMY OPTIMIZER</h1>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>
-        <script src="src/CIFI/main.js"></script>
+        <script src="src/CIFI/decimal.js"></script>
+        <script src="src/CIFI/GameDB.js"></script>
+        <script src="src/CIFI/saveData.js"></script>
+        <script src="src/CIFI/PortalObjects.js"></script>
+        <script src="src/CIFI/navbar.js"></script>
     </body>
 </html>
