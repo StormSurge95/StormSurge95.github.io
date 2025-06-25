@@ -108,6 +108,8 @@ let portals = {
     //academyGears: academyGearsPortal,
     //academyFarms: academyFarmsPortal
 }
+playerData.activePortal = playerData.activePortal || 'setup';
+let activePortal = portals[playerData.activePortal];
 
 let panelResizeFunction = null;
 let destroyCurrentPanel = null;
