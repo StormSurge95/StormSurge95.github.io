@@ -10,7 +10,7 @@ let setupPortal = {
     activePage: 'default',
     pages: {
         list: ['settings'],
-        prio: {
+        settings: {
             id: 'settings',
             text: 'Optimizer Settings',
             color: '#FF0054',
