@@ -8,7 +8,7 @@ const portalPanel = {
 function ConstructPortal(h, w, obj) {
     portalPanel.obj = obj;
 
-    let aspectRatio = width / height;
+    let aspectRatio = w / h;
     if (aspectRatio > 2) {
         portalPanel.width = w * 2 / aspectRatio;
         portalPanel.height = h;
