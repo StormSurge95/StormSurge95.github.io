@@ -1,35 +1,35 @@
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+:root {
+    --navWidth: 10px;
+    --navHeight: 10px;
+    --panelHeight: 10px;
+    --stdFontSize: 12px;
+    --lgFontSize: 16px;
+    --lgFontsize2: 20px;
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+body {
+    background-color: dimgray;
+    font-family: 'Syncopate';
+    font-size: var(--stdFontSize);
 }
 
-/* Change the background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
+.navBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
+.navButton {
+    font-size: 20px;
+    font-family: 'Syncopate';
+    flex: 1 1 min-content;
+    background-color: rgba(255,255,255,0.2);
 }
 
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

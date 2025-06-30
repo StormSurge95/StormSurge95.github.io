@@ -12,8 +12,20 @@
         <script src="src/CIFI/GameDB.js"></script>
         <script src="src/CIFI/saveData.js"></script>
 
-        <script src="src/CIFI/PortalObjects.js"></script>
-        <script src="src/CIFI/setupPortal.js"></script>
-        <script src="src/CIFI/navbar.js"></script>
+        <div class="navBar">
+            <button class="navButton" id="settingsBtn" onclick="openMenu('settings')">SETTINGS</button>
+            <button class="navButton" id="tokensBtn" onclick="openMenu('tokens')">TOKENS</button>
+            <button class="navButton" id="diamondsBtn" onclick="openMenu('diamonds')">DIAMONDS</button>
+            <button class="navButton" id="modsBtn" onclick="openMenu('mods')">MODS</button>
+            <button class="navButton" id="shipsBtn" onclick="openMenu('ships')">SHIPS</button>
+            <button class="navButton" id="missionsBtn" onclick="openMenu('missions')">MISSIONS</button>
+            <button class="navButton" id="gearsBtn" onclick="openMenu('gears')">GEARS</button>
+            <button class="navButton" id="updateBtn" onclick="checkUpdate">UPDATE</button>
+        </div>
+
+        <h1 id="menu-title" style="text-align: center;"></h1>
+        <div id="menu">
+        </div>
+        <script src="src/CIFI/main.js"></script>
     </body>
 </html>

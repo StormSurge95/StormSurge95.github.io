@@ -1,54 +1,3 @@
-let tokensPortal = {
-    verticalCells: 0,
-    horizontalCells: 0,
-    pageText: 1.8,
-    headerText: 1.8,
-    labelText: 0.9,
-    displayText: 1.4,
-    buttonText: 1.7,
-    inputText: 1,
-    activePage: '',
-    pages: {
-        list: ['shop'],
-        shop: {
-            id: 'shop',
-            text: 'Tokens Upgrades',
-            color: '#FF0054',
-            pagerSize: { width: 15, height: 2 },
-            pagerLeft: 1,
-            headers: [
-                {
-                    text: 'Tier 1',
-                    left: 1, top: 11,
-                    height: 3, width: 20
-                },
-                {
-                    text: 'Tier 2',
-                    left: 31, top: 11,
-                    height: 3, width: 20
-                },
-                {
-                    text: 'Tier 3',
-                    left: 1, top: 22,
-                    height: 3, width: 20,
-                }
-            ],
-            labels: [
-                {
-                    text: 'Tokens Boost',
-                    left: 1, top: 15,
-                    height: 3, width: 10
-                }
-            ],
-            inputs: [],
-            checkboxes: [],
-            displays: [],
-            buttons: [],
-            toggles: [],
-        }
-    }
-}
-
 function tokenUnlocked(id) {
     let key = GameDB.tokens[id].unlock;
     if (key.length == 3) {
@@ -91,7 +40,7 @@ function calcTokenPower(id) {
     if (cost === Infinity) return 0;
 
     let bonus = GameDB.tokens[id].bonus;
-    let prio = playerData.priorities;
+    let prio = playerData.weights;
 
     let cells = bonus.MK1 * bonus.MK2 * bonus.MK3 * bonus.MK4 * bonus.MK5 * bonus.MK6 * bonus.MK7 * bonus.MK8;
     

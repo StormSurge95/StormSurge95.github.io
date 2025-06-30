@@ -2050,15 +2050,79 @@ let GameDB = {
     mods: {}
 };
 
+const suffixes = {
+    k: 1e3,
+    m: 1e6,
+    b: 1e9,
+    t: 1e12,
+    qa: 1e15,
+    qu: 1e18,
+    sx: 1e21,
+    sp: 1e24,
+    o: 1e27,
+    n: 1e30,
+    d: 1e33
+}
+
 /**
- * 
  * @param {string} val 
  */
-function parseBigNum(val) {
-    const sufs = ['k','m','b','t','qa','qu','sx','sp','o','n','d'];
-    const vals = [1e3,1e6,1e9,1e12,1e15,1e18,1e21,1e24,1e27,1e30,1e33];
-    let l = val.endsWith('a') || val.endsWith('u') ? 2 : 1;
-    let num = parseFloat(val.slice(0,-l));
-    let suffix = val.slice(-l);
-    return num * vals[sufs.indexOf(suffix)];
+function getNumFromShort(val) {
+    return parseFloat(val.slice(0,val.indexOf(val.match(`/${Object.keys(suffixes).join("|")}/`))));
+}
+
+/**
+ * @param {string} val 
+ */
+function getSufFromShort(val) {
+    return val.slice(val.indexOf(val.match(`/${Object.keys(suffixes).join("|")}/`)));
+}
+
+/**
+ * @param {string} val 
+ */
+function parseShortNum(val) {
+    if (!isFormattedShortNum(val))
+        throw Error("`val` IS NOT IN SHORT FORMAT; CANNOT PARSE");
+    let num = getNumFromShort(val);
+    let suffix = getSufFromShort(val);
+    return num * suffixes[suffix];
+}
+
+/**
+ * @param {string} val 
+ */
+function parseExpNum(val) {
+    const x = val.split('e');
+    if (x.length == 2) {
+        return parseFloat(n) * Math.pow(10,parseFloat(e));
+    }
+}
+
+function isFormattedExpNum(input) {
+    return typeof input == 'string' && input.match(/^(\d+\.?\d*e*\d+)/)
+}
+
+function isFormattedShortNum(input) {
+    return typeof input == 'string' && input.match(/(k|m|b|t|qa|qu|sx|sp|o|n|d)$/);
+}
+
+/**
+ * @param {string|number} input 
+ */
+function isNum(input) {
+    return typeof input == 'number' || isFormattedExpNum(input) || isFormattedShortNum(input);
+}
+
+/**
+ * @param {number} val 
+ * @param {'exp'|'short'} type 
+ */
+function formatNumber(val, type) {
+    if (type == 'exp') {
+        return val.toExponential(2);
+    }
+    if (type == 'short') {
+        
+    }
 }
